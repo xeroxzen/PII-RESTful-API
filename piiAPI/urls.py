@@ -22,7 +22,7 @@ schema_view = get_swagger_view(title='Pii API')
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/v1/pii/', include('api.urls')),
-    path('api-auth/', include('rest_framework.urls')),
+    # path('api-auth/', include('rest_framework.urls')),
     path('api/v1/user/', include('user.urls')),
     path('api/docs/', schema_view),
     path("swagger/", schema_view),
