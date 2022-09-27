@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-q_&+=09e#dm%e-+r02=*n2j^r)5fz0x5^h(0kr8@(r^=hlqu)a
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -40,14 +40,14 @@ INSTALLED_APPS = [
 
     # Third party apps
     'rest_framework',
-    'rest_framework.authtoken',
-    'dj_rest_auth',
-    'dj_rest_auth.registration',
+    # 'rest_framework.authtoken',
+    # 'dj_rest_auth',
+    # 'dj_rest_auth.registration',
 
 
     # Local apps
-    # 'user.apps.UsersConfig',    
-    # 'api.apps.ApiConfig',
+    'users.apps.UsersConfig',    
+    'api.apps.ApiConfig',
 ]
 
 MIDDLEWARE = [
@@ -143,3 +143,6 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Auth User Model
+AUTH_USER_MODEL = 'user.User'
