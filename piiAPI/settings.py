@@ -46,7 +46,7 @@ INSTALLED_APPS = [
 
 
     # Local apps
-    'users.apps.UsersConfig',    
+    'user.apps.UserConfig',    
     'api.apps.ApiConfig',
 ]
 
