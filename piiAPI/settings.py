@@ -46,7 +46,8 @@ INSTALLED_APPS = [
 
 
     # Local apps
-    'api.apps.ApiConfig',    
+    # 'user.apps.UsersConfig',    
+    # 'api.apps.ApiConfig',
 ]
 
 MIDDLEWARE = [
