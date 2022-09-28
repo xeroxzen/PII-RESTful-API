@@ -1,4 +1,3 @@
-from typing import Reversible
 import uuid
 from django.db import models
 
@@ -59,17 +58,5 @@ class Pii(models.Model):
     
     class Meta:
         ordering = ['created_at']
-    
-    def get_absolute_url(self):
-        return Reversible('pii_detail', args=[str(self.id)])
-    
-    def get_update_url(self):
-        return Reversible('pii_update', args=[str(self.id)])
-    
-    def get_delete_url(self):
-        return Reversible('pii_delete', args=[str(self.id)])
-    
-    def get_create_url(self):
-        return Reversible('pii_create')
-    
+
     
